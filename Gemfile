@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Will Pagine gem for pages
+gem 'will_paginate'
+# Postgres Gem
+gem 'pg', '~> 0.21'
+
 gem 'faker'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
