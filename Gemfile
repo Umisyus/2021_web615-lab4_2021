@@ -7,7 +7,7 @@ end
 
 # Will Pagine gem for pages
 gem 'will_paginate'
-# Postgres Gem
+# Postgres Gem  
 gem 'pg', '~> 0.21'
 
 gem 'faker'
@@ -17,7 +17,6 @@ gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
 # Use Puma as the app server
-gem 'sqlite3'
 gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -57,6 +56,9 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'annotate'
   gem 'rails-erd'
+
+  gem 'sqlite3'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
