@@ -1,0 +1,32 @@
+### docker-compose.yml
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "54320:5432"
+  redis:
+    image: redis:7.0-rc1-alpine
+    command: redis-server
+    logging:
+      driver: none
+    volumes:
+      - "./tmp/redis:/data/"
+
+  app:
+    build:
+      context: .
+      args:
+        UID: ${UID:-1001}
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - RAILS_ENV=development
+    entrypoint: ["bin/docker_start.sh"]
