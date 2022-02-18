@@ -11,8 +11,10 @@ gem 'jquery-rails'
 gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
-# Use Puma as the app server
-gem 'sqlite3'
+
+gem 'pg', '~> 0.21'
+gem 'rails_12factor', group: :production
+
 gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails'
