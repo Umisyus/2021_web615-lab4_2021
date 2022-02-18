@@ -29,4 +29,5 @@ services:
       - db
     environment:
       - RAILS_ENV=development
-    entrypoint: ["bin/docker_start.sh"]
+    entrypoint: ["bin/docker-start.sh"]
+    # command: bin/rails db:migrate 2>/dev/null && bin/rails db:create && bin/rails db:migrate && bin/rails db:test:prepare && bin/rails db:seed && rm -f tmp/pids/server.pid && bin/rails server -p 3000 -b "0.0.0.0"
